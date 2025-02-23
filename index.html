@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" sizes="192x192" href="Icon.png">
+    <script src="https://kit.fontawesome.com/b1e903e1a1.js" crossorigin="anonymous"></script>
+    <link rel="icon" sizes="192x192" href="icon.png">
     <title>Entry</title>
     <style>
         body {
@@ -29,34 +30,73 @@
             border: 2px solid blueviolet;
             border-radius: 15px;
         }
-        .my-4{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: blueviolet;
-            height: 50px;
-            width: 100%;
-            color: white;
-        }
         @media only screen and (max-width: 850px) {
             iframe {
                 width: auto;
             }
         }
+        .H{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: blueviolet;
+            height: 50px;
+            width: 100%;
+            color: white;
+            padding: 0 20px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+           
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .my-4{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <span class="my-4"><h1 >Entry</h1></span>
-        <div class="mb-4">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPCjw5Q3br9ScA4xWKucDaNUyiqscCIDohAepP5M4Uttgxbw/viewform?embedded=true" width="640" height="758" frameborder="" marginheight="0" marginwidth="0">Loading…</iframe>
+<div class="H">
+    <div class="dropdown">
+        <i class="fa-solid fa-bars"></i>
+        <div class="dropdown-content">
+            <a href="https://docs.google.com/spreadsheets/d/1_FPKY5nfXkzD-b9oHSfG5Olujb4qtjWHx3nSk7L-28c/edit?usp=drive_link"target="_blank">Statement</a>
         </div>
-        
+    </div>
+    <span class="my-4"><h1>Entry</h1></span>
+</div>
+    <div class="container">
+        <div class="mb-4">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPCjw5Q3br9ScA4xWKucDaNUyiqscCIDohAepP5M4Uttgxbw/viewform?embedded=true" frameborder="0">Loading…</iframe>
+        </div>
         <div>
             <iframe class="if" src="https://docs.google.com/spreadsheets/d/1_FPKY5nfXkzD-b9oHSfG5Olujb4qtjWHx3nSk7L-28c/edit?usp=sharing" allowfullscreen></iframe>
         </div>
     </div>
-
 </body>
 </html>
