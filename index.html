@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,96 +12,119 @@
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             background-color: #f8f9fa;
             text-align: center;
-            margin: 0%;
-            padding: 0%;
+            margin: 0;
+            padding: 0;
         }
+
         .container {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: auto;
-            flex-direction: column;
+            padding: 20px;
         }
+
         iframe {
-            margin-top: 30px;
-            margin-bottom: 25px;
-            width: 50rem;
+            width: 90%;
+            max-width: 800px;
             height: 500px;
             border: 2px solid blueviolet;
             border-radius: 15px;
+            margin: 25px 0;
         }
-        @media only screen and (max-width: 850px) {
+
+        @media (max-width: 600px) {
             iframe {
-                width: auto;
+                height: 400px;
             }
         }
-        .H{
+
+        .H {
             display: flex;
             align-items: center;
             justify-content: space-between;
             background-color: blueviolet;
             height: 50px;
-            width: auto;
+            width: 100%;
             color: white;
             padding: 0 20px;
         }
+
         .dropdown {
             position: relative;
             display: inline-block;
-          
         }
-        .dropdown i{
+
+        .dropdown i {
             font-size: 1.8rem;
+            cursor: pointer;
         }
+
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: white;
             min-width: 140px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
             left: 0;
             border-radius: 5px;
             overflow: hidden;
-            
         }
+
         .dropdown-content a {
             color: black;
-            padding: 7px;
+            padding: 10px;
             text-decoration: none;
             display: block;
         }
+
         .dropdown-content a:hover {
             background-color: #ddd;
         }
+
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        .my-4{
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+
+        .title {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .title h1 {
+            margin: 0;
+            font-size: 1.5rem;
         }
     </style>
 </head>
+
 <body>
-<div class="H">
-    <div class="dropdown">
-        <i class="fa-solid fa-bars"></i>
-        <div class="dropdown-content">
-            <a href="https://docs.google.com/spreadsheets/d/1_FPKY5nfXkzD-b9oHSfG5Olujb4qtjWHx3nSk7L-28c/edit?usp=drive_link"target="_blank">Statement</a>
+    <div class="H">
+        <div class="dropdown">
+            <i class="fa-solid fa-bars"></i>
+            <div class="dropdown-content">
+                <a href="https://docs.google.com/spreadsheets/d/1_FPKY5nfXkzD-b9oHSfG5Olujb4qtjWHx3nSk7L-28c/edit?usp=drive_link"
+                    target="_blank">Sheet</a>
+            </div>
+        </div>
+        <div class="title">
+            <h1>Entry</h1>
         </div>
     </div>
-    <span class="my-4"><h1>Entry</h1></span>
-</div>
+
     <div class="container">
-        <div class="mb-4">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPCjw5Q3br9ScA4xWKucDaNUyiqscCIDohAepP5M4Uttgxbw/viewform?embedded=true" frameborder="0">Loading…</iframe>
-        </div>
-        <div>
-            <iframe class="if" src="https://docs.google.com/spreadsheets/d/1_FPKY5nfXkzD-b9oHSfG5Olujb4qtjWHx3nSk7L-28c/edit?usp=sharing" allowfullscreen></iframe>
-        </div>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScPCjw5Q3br9ScA4xWKucDaNUyiqscCIDohAepP5M4Uttgxbw/viewform?embedded=true"
+            frameborder="0">Loading…</iframe>
+
+        <iframe
+            src="https://docs.google.com/spreadsheets/d/1_FPKY5nfXkzD-b9oHSfG5Olujb4qtjWHx3nSk7L-28c/edit?usp=sharing"></iframe>
+
+        <iframe width="569" height="351" seamless frameborder="0" scrolling="no"
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQLoMwioRv9SjkouuT2EKkWI5HMFQ9y117VtuEtiXSLHTLEL1E7SYiHzIbDCMa5OgOgTNKuen3dqFEL/pubchart?oid=1466271058&amp;format=interactive"></iframe>
     </div>
 </body>
+
 </html>
