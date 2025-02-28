@@ -22,22 +22,15 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            padding: 20px;
         }
 
         iframe {
-            width: 90%;
-            max-width: 800px;
-            height: 500px;
+            width: 90vw;
+            height: 35rem;
             border: 2px solid blueviolet;
-            border-radius: 15px;
-            margin: 25px 0;
-        }
-
-        @media (max-width: 600px) {
-            iframe {
-                height: 400px;
-            }
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-radius: 20px;
         }
 
         .H {
@@ -49,6 +42,7 @@
             width: 100%;
             color: white;
             padding: 0 20px;
+            box-sizing: border-box;
         }
 
         .dropdown {
@@ -97,6 +91,13 @@
             margin: 0;
             font-size: 1.5rem;
         }
+
+        .graph {
+            border: none;
+            border-radius: 0;
+            /* width: 80vw;
+            height: 35rem; */
+        }
     </style>
 </head>
 
@@ -117,12 +118,12 @@
     <div class="container">
         <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLScPCjw5Q3br9ScA4xWKucDaNUyiqscCIDohAepP5M4Uttgxbw/viewform?embedded=true"
-            frameborder="0">Loading…</iframe>
+            frameborder="0"></iframe>
 
         <iframe
             src="https://docs.google.com/spreadsheets/d/1_FPKY5nfXkzD-b9oHSfG5Olujb4qtjWHx3nSk7L-28c/edit?usp=sharing"></iframe>
 
-        <iframe width="569" height="351" seamless frameborder="0" scrolling="no"
+        <iframe class="graph" width="401" height="417" seamless frameborder="0" scrolling="no"
             src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQLoMwioRv9SjkouuT2EKkWI5HMFQ9y117VtuEtiXSLHTLEL1E7SYiHzIbDCMa5OgOgTNKuen3dqFEL/pubchart?oid=1466271058&amp;format=interactive"></iframe>
     </div>
 </body>
