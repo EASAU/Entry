@@ -40,43 +40,49 @@
             color: white;
             padding: 0 20px;
             box-sizing: border-box;
+            position: relative;
         }
 
         .dropdown {
-            position: relative;
-            display: inline-block;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 0;
+            background-color: #572ca3;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            text-align: left;
         }
 
-        .dropdown i {
+        .dropdown a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .dropdown a:hover {
+            background-color: blueviolet;
+        }
+
+        .menu-icon {
             font-size: 1.8rem;
             cursor: pointer;
-        }
-
-        .dropdown-content {
-            display: none;
             position: absolute;
-            background-color: white;
-            min-width: 140px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            left: 0;
-            border-radius: 5px;
-            overflow: hidden;
+            right: 20px;
         }
 
-        .dropdown-content a {
-            color: black;
-            padding: 10px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
         }
 
         .title {
@@ -93,15 +99,15 @@
 
 <body>
     <div class="H">
-        <div class="dropdown">
-            <i class="fa-solid fa-bars"></i>
-            <div class="dropdown-content">
-                <a href="Sheet.html"target="_blank">Sheet</a>
-            </div>
-        </div>
         <div class="title">
             <h1>Entry</h1>
         </div>
+        <span class="menu-icon" onclick="toggleNav()">&#9776;</span>
+    </div>
+
+    <div id="myDropdown" class="dropdown">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+        <a href="Sheet.html" target="_blank" onclick="toggleNav()">Sheet</a>
     </div>
 
     <div class="container">
@@ -109,10 +115,17 @@
             src="https://docs.google.com/forms/d/e/1FAIpQLScPCjw5Q3br9ScA4xWKucDaNUyiqscCIDohAepP5M4Uttgxbw/viewform?embedded=true"
             frameborder="0"></iframe>
     </div>
+
     <script>
+
         window.addEventListener("contextmenu", function (e) {
             e.preventDefault();
         });
+
+        function toggleNav() {
+            var dropdown = document.getElementById("myDropdown");
+            dropdown.style.width = dropdown.style.width === "200px" ? "0" : "200px";
+        }
     </script>
 </body>
 
